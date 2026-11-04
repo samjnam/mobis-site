@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOBIS | Driving the Future of Mobility</title>
+<meta name="description" content="MOBIS: locations, operations, values, ethics and careers across MOBIS Alabama, MOBIS Savannah, MOBIS Georgia and MOBIS North America.">
+<meta property="og:title" content="MOBIS">
+<meta property="og:description" content="One information hub for MOBIS operations and careers across North America.">
+<meta name="theme-color" content="#00288C">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#00288C; --navy:#001446; --ink:#181B31; --red:#E50013; --red-text:#C40010;
+  --bg:#FFFFFF; --alt:#F6F8FB; --card:#FFFFFF; --line:#E1E5EC; --muted:#555E72; --soft:#EEF1F7;
+  --radius:14px; --shadow:0 1px 2px rgba(0,20,70,.06),0 8px 24px rgba(0,20,70,.06);
+  --shadow-lg:0 2px 4px rgba(0,20,70,.08),0 20px 48px rgba(0,20,70,.14);
+  --wrap:1240px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--red-text)}
+a:hover{color:#8F000B}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:var(--ink);padding:10px 16px;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+h1,h2,h3{font-weight:500;line-height:1.15;margin:0}
+.upper{text-transform:uppercase;letter-spacing:.02em}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red-text);margin:0 0 14px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--red)}
+.lead{font-size:18px;color:var(--muted);max-width:720px;margin:16px 0 0}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+section.block{padding:96px 0}
+section.block + section.block{border-top:1px solid var(--line)}
+.section-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:40px}
+.section-head h2{font-size:clamp(28px,3.4vw,40px);text-transform:uppercase}
+h1,h2{color:var(--ink)}
+.white{background:var(--alt)}
+.navy{background:#fff;color:var(--ink)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s var(--ease),background .2s,box-shadow .2s,color .2s;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(229,0,19,.28)}
+.btn-red:hover{background:#C40010;color:#fff}
+.btn-ghost,.btn-line{border-color:var(--ink);color:var(--ink);background:#fff}
+.btn-ghost:hover,.btn-line:hover{background:var(--ink);color:#fff}
+.btn-white{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(0,40,140,.22)}
+.btn-white:hover{background:var(--navy);color:#fff}
+.link-arrow{font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px}
+.link-arrow svg{transition:transform .2s var(--ease)}
+.link-arrow:hover svg{transform:translateX(4px)}
+
+/* Header */
+.topbar{background:var(--alt);color:var(--muted);font-size:12.5px;border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding-top:7px;padding-bottom:7px}
+.topbar a{color:var(--ink);text-decoration:none;margin-left:18px}
+.topbar a:hover{color:var(--red-text)}
+header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s,background .3s}
+header.site.scrolled{background:rgba(255,255,255,.97);box-shadow:0 8px 30px rgba(0,20,70,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:80px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+.brand img,.logo-plate{height:52px;width:auto;background:var(--blue);padding:8px 14px;border-radius:10px}
+.brand span{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding-left:14px;border-left:1px solid var(--line);color:var(--blue)}
+.menu{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+.menu > li{position:relative}
+.menu > li > a,.menu > li > button{display:flex;align-items:center;gap:6px;color:var(--ink);text-decoration:none;font:500 13.5px/1 Poppins,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:12px 12px;border-radius:8px;background:none;border:0;cursor:pointer;position:relative}
+.menu > li > a::after,.menu > li > button::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.menu > li > a:hover::after,.menu > li > button:hover::after,.menu > li > a.active::after,.menu > li > button.active::after{transform:scaleX(1)}
+.menu .caret{width:10px;height:10px;transition:transform .2s}
+.menu li.open .caret{transform:rotate(180deg)}
+.dropdown{position:absolute;top:calc(100% + 8px);left:0;min-width:300px;background:#fff;border-radius:12px;box-shadow:var(--shadow-lg);padding:8px;list-style:none;margin:0;opacity:0;visibility:hidden;transform:translateY(6px);transition:all .2s var(--ease)}
+.menu li.open .dropdown,.menu li:hover .dropdown{opacity:1;visibility:visible;transform:none}
+.dropdown a{display:flex;flex-direction:column;padding:10px 14px;border-radius:8px;color:var(--ink);text-decoration:none;font-size:14px;font-weight:500}
+.dropdown a small{color:var(--muted);font-weight:400;font-size:12px}
+.dropdown a:hover{background:var(--soft)}
+.menu .careers-btn{background:var(--red);color:#fff!important;border-radius:999px;padding:12px 18px;margin-left:8px;font-weight:600}
+.menu .careers-btn::after{display:none}
+.menu .careers-btn:hover{background:#C40010}
+.nav-tools{display:flex;align-items:center;gap:6px}
+.icon-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:var(--soft);border:0;color:var(--ink);cursor:pointer}
+.icon-btn:hover{background:#E1E6F0}
+.hamburger{display:none}
+@media (max-width:1120px){
+  .menu{display:none}
+  .hamburger{display:inline-flex}
+}
+.drawer{position:fixed;inset:0;z-index:150;display:none}
+.drawer.open{display:block}
+.drawer .scrim{position:absolute;inset:0;background:rgba(0,10,40,.55)}
+.drawer nav{position:absolute;right:0;top:0;bottom:0;width:min(360px,88vw);background:#fff;padding:20px;overflow:auto;animation:slide .3s var(--ease)}
+@keyframes slide{from{transform:translateX(100%)}to{transform:none}}
+.drawer nav a{display:block;padding:14px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+.drawer nav a.sub{padding-left:28px;font-weight:400;font-size:14px;color:var(--muted)}
+.drawer nav .btn{margin-top:16px;width:100%}
+
+/* Hero */
+.hero{position:relative;color:var(--ink);overflow:hidden;background:var(--alt)}
+.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.04);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.95) 40%,rgba(255,255,255,.6) 68%,rgba(255,255,255,.05) 100%)}
+@media (max-width:860px){.hero::after{background:rgba(255,255,255,.9)}}
+.hero .wrap{position:relative;z-index:1;padding-top:120px;padding-bottom:120px}
+.hero h1{font-size:clamp(36px,5.4vw,68px);text-transform:uppercase;max-width:900px;letter-spacing:.01em}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero.sub .wrap{padding-top:88px;padding-bottom:88px}
+.hero.sub h1{font-size:clamp(32px,4.4vw,54px)}
+.stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line)}
+.stat{background:rgba(255,255,255,.96);padding:26px 24px}
+.stat b{display:block;font-size:30px;font-weight:600;color:var(--blue)}
+.stat span{font-size:13px;color:var(--muted)}
+
+/* Cards */
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.grid.g3{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card .media{height:180px;background:#E9EDF4;background-size:cover;background-position:center;position:relative}
+.card .media .tag{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.92);color:var(--ink);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:999px}
+.card .body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:20px;font-weight:600}
+.card .where{font-size:13px;font-weight:500;color:var(--muted);display:flex;align-items:center;gap:6px}
+.card p{margin:0;color:var(--muted);font-size:15px;flex:1}
+.feature{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;position:relative;transition:border-color .3s,box-shadow .3s}
+.feature:hover{border-color:#C7CEDC;box-shadow:var(--shadow)}
+.feature .ico{width:48px;height:48px;border-radius:12px;background:#FFE9EB;color:var(--red);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.feature h3{font-size:18px;font-weight:600;margin-bottom:8px}
+.feature p{margin:0;color:var(--muted);font-size:15px}
+.feature .site{margin-top:14px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.chip{display:inline-flex;align-items:center;padding:7px 14px;border-radius:999px;background:var(--soft);font-size:13.5px;font-weight:500;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+
+/* Split */
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:56px;align-items:center}
+.photo{border-radius:20px;min-height:380px;background:#E9EDF4 center/cover;box-shadow:var(--shadow-lg)}
+.loc{padding:88px 0;border-top:1px solid var(--line)}
+.loc:nth-child(even){background:var(--alt)}
+.loc .num{font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--red-text);text-transform:uppercase}
+.loc h2{font-size:clamp(28px,3vw,38px);text-transform:uppercase;margin:8px 0 16px}
+.loc p{color:var(--muted)}
+.loc .meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+
+/* Careers */
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:28px}
+.search-field{flex:1 1 280px;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:0 18px;min-height:50px}
+.search-field input{border:0;outline:0;font:inherit;font-size:15px;flex:1;background:transparent;color:var(--ink)}
+.filter{border:1px solid var(--line);background:#fff;color:var(--ink);font:500 13px Poppins,sans-serif;padding:0 16px;min-height:44px;border-radius:999px;cursor:pointer}
+.filter[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.job-card .head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.job-card .n{font-size:12px;font-weight:600;color:var(--red-text);letter-spacing:.14em}
+.badge{font-size:11.5px;font-weight:600;padding:5px 10px;border-radius:999px;background:var(--soft);color:var(--blue);letter-spacing:.04em}
+.job-card .btn{margin-top:8px;width:100%}
+.empty{display:none;text-align:center;padding:40px;border:1px dashed #C7CEDC;border-radius:var(--radius);color:var(--muted)}
+.benefits{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.benefit{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-weight:500;box-shadow:var(--shadow)}
+.benefit svg{flex:none;color:var(--red)}
+
+/* Values accordion */
+.acc{border-top:1px solid var(--line)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:22px 4px;font-size:18px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary .pm{width:28px;height:28px;border-radius:50%;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;transition:transform .25s}
+.acc details[open] summary .pm{transform:rotate(45deg);color:var(--red)}
+.acc details[open] summary{color:var(--blue)}
+.acc details p{margin:0 4px 22px;color:var(--muted);max-width:640px}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+.value{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .3s var(--ease)}
+.value:hover{transform:translateY(-3px)}
+.value .n{font-size:12px;font-weight:600;color:var(--red-text);letter-spacing:.14em}
+.value h3{font-size:17px;font-weight:600;margin-top:8px}
+
+/* Docs / contact */
+.doc{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:500}
+.doc:hover{color:var(--red-text)}
+.doc .type{font-size:11px;font-weight:600;letter-spacing:.1em;padding:5px 9px;border-radius:6px;background:var(--soft);color:var(--blue)}
+.report{border:1.5px solid var(--line);border-radius:var(--radius);padding:24px;text-decoration:none;color:var(--ink);background:#fff;display:flex;flex-direction:column;gap:6px;transition:border-color .2s,transform .2s}
+.report:hover{border-color:var(--red);transform:translateY(-3px);color:var(--ink)}
+.report b{font-size:17px;font-weight:600}
+.report span{font-size:14px;color:var(--muted)}
+dl.contact{display:grid;grid-template-columns:76px 1fr;row-gap:10px;margin:0;font-size:15px}
+dl.contact dt{color:var(--muted)}
+dl.contact dd{margin:0}
+.map{border:0;width:100%;height:100%;min-height:340px;border-radius:20px;box-shadow:var(--shadow)}
+.ph{color:#8A93A6;font-style:italic}
+
+/* CTA band */
+.cta{background:#fff center/cover;position:relative;color:var(--ink);overflow:hidden;border-top:1px solid var(--line)}
+.cta::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.95) 55%,rgba(255,255,255,.75) 100%);border-left:6px solid var(--red)}
+.cta .wrap{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;padding-top:72px;padding-bottom:72px}
+.cta h2{font-size:clamp(26px,3vw,38px);text-transform:uppercase}
+
+/* Footer */
+footer.site{background:var(--alt);color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer.site .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;padding:72px 0 48px}
+footer.site h4{color:var(--blue);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 16px;font-weight:600}
+footer.site a{color:var(--ink);text-decoration:none;display:block;padding:5px 0}
+footer.site a:hover{color:var(--red-text)}
+footer.site .legal{border-top:1px solid var(--line);padding:22px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:12.5px}
+
+/* Search overlay */
+.search-ov{position:fixed;inset:0;z-index:180;background:rgba(0,10,40,.6);backdrop-filter:blur(6px);display:none;align-items:flex-start;justify-content:center;padding:10vh 16px}
+.search-ov.open{display:flex}
+.search-box{background:#fff;width:min(640px,100%);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden}
+.search-box .search-field{border:0;border-bottom:1px solid var(--line);border-radius:0;min-height:62px}
+.results{max-height:50vh;overflow:auto;padding:8px}
+.results a{display:block;padding:12px 14px;border-radius:10px;text-decoration:none;color:var(--ink)}
+.results a:hover,.results a.sel{background:var(--soft)}
+.results a small{display:block;color:var(--muted);font-size:12px}
+kbd{font:500 11px Poppins,sans-serif;border:1px solid var(--line);border-radius:6px;padding:2px 6px;color:var(--muted)}
+
+/* Page routing + reveal */
+.js [data-page]{display:none}
+.js [data-page].current{display:block;animation:fadein .4s var(--ease)}
+html:not(.js) .nojs-hide{display:none!important}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.to-top{position:fixed;right:20px;bottom:20px;z-index:90;width:48px;height:48px;border-radius:50%;background:var(--red);color:#fff;border:0;box-shadow:0 10px 24px rgba(229,0,19,.35);cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:all .3s var(--ease)}
+.to-top.show{opacity:1;pointer-events:auto;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+@media (max-width:640px){
+  section.block{padding:72px 0}
+  .hero .wrap{padding-top:80px;padding-bottom:80px}
+  .topbar .links{display:none}
+  .brand span{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar"><div class="wrap"><span>MOBIS · Unified information hub</span><span class="links"><a href="https://www.mobis.com/en/index.do" target="_blank" rel="noopener">mobis.com</a><a href="https://mobisna.com/home" target="_blank" rel="noopener">mobisna.com</a><a href="https://www.mobisalabamallc.com/home" target="_blank" rel="noopener">Alabama</a><a href="https://www.mobissavannah.com/" target="_blank" rel="noopener">Savannah</a><a href="https://www.mobisgeorgia.com/" target="_blank" rel="noopener">Georgia</a></span></div></div>
+
+<header class="site" id="header">
+<div class="wrap nav">
+  <a class="brand" href="#/home" aria-label="MOBIS home"><img src="https://mobissavannah.com/img/b0838fff-9802-42e4-ac52-a19fbf2f0bcb/logo-1.png?fm=png&amp;q=80&amp;fit=max&amp;crop=488%2C170%2C0%2C0" alt="Hyundai MOBIS" width="115" height="40"></a>
+  <nav aria-label="Main">
+    <ul class="menu">
+      <li><a href="#/home" data-nav="home">Home</a></li>
+      <li><a href="#/about" data-nav="about">About MOBIS</a></li>
+      <li class="has-dd"><button type="button" data-nav="locations" aria-expanded="false" aria-haspopup="true">Our Locations <svg class="caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <ul class="dropdown">
+          <li><a href="#/locations">All locations<small>Overview of our four organizations</small></a></li>
+          <li><a href="#/locations/alabama">MOBIS Alabama<small>Montgomery, Alabama</small></a></li>
+          <li><a href="#/locations/savannah">MOBIS Savannah<small>Ellabell, Georgia</small></a></li>
+          <li><a href="#/locations/georgia">MOBIS Georgia<small>West Point, Georgia</small></a></li>
+          <li><a href="#/locations/northamerica">MOBIS North America<small>Michigan, Ohio &amp; Georgia</small></a></li>
+        </ul></li>
+      <li><a href="#/operations" data-nav="operations">Operations</a></li>
+      <li><a href="#/values" data-nav="values">Our Values</a></li>
+      <li><a href="#/ethics" data-nav="ethics">Ethics &amp; Compliance</a></li>
+      <li><a href="#/contact" data-nav="contact">Contact Us</a></li>
+      <li class="has-dd"><button type="button" class="careers-btn" data-nav="careers" aria-expanded="false" aria-haspopup="true">Careers <svg class="caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <ul class="dropdown" style="left:auto;right:0">
+          <li><a href="#/careers">All career destinations<small>Six recruiting portals</small></a></li>
+          <li><a href="#/careers/benefits">Benefits<small>What MOBIS employers offer</small></a></li>
+          <li><a href="#/careers/areas">Career areas<small>Types of roles across MOBIS</small></a></li>
+        </ul></li>
+    </ul>
+  </nav>
+  <div class="nav-tools">
+    <button class="icon-btn nojs-hide" type="button" id="openSearch" aria-label="Search the site (Ctrl+K)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+    <button class="icon-btn hamburger" type="button" id="openDrawer" aria-label="Open menu" aria-controls="drawer" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="scrim" data-close></div>
+  <nav aria-label="Mobile">
+    <div style="display:flex;justify-content:flex-end"><button class="icon-btn" style="background:var(--soft);color:var(--ink)" type="button" data-close aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <a href="#/home">Home</a><a href="#/about">About MOBIS</a><a href="#/locations">Our Locations</a>
+    <a class="sub" href="#/locations/alabama">MOBIS Alabama</a><a class="sub" href="#/locations/savannah">MOBIS Savannah</a><a class="sub" href="#/locations/georgia">MOBIS Georgia</a><a class="sub" href="#/locations/northamerica">MOBIS North America</a>
+    <a href="#/operations">Operations</a><a href="#/values">Our Values</a><a href="#/ethics">Ethics &amp; Compliance</a><a href="#/contact">Contact Us</a>
+    <a class="btn btn-red" href="#/careers">Explore Careers</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ================= HOME ================= -->
+<div id="home" data-page="home" data-title="MOBIS | Driving the Future of Mobility">
+  <section class="hero">
+    <div class="bg" style="background-image:url('https://mobissavannah.com/img/2a606088-eebf-405a-9292-043bd888cfe8/mal-sv-module-name.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=2258%2C1363%2C0%2C0')"></div>
+    <div class="wrap on-dark">
+      <p class="eyebrow">MOBIS</p>
+      <h1>Driving the Future of Mobility Across North America.</h1>
+      <p class="lead">Discover the people, facilities, innovation, and manufacturing operations that make MOBIS a leading partner in the North American automotive industry.</p>
+      <div class="actions"><a class="btn btn-white" href="#/locations">Explore Our Locations</a><a class="btn btn-red" href="#/careers">Explore Careers</a></div>
+    </div>
+    <div class="stats wrap" style="padding:0;max-width:none">
+      <div class="stat"><b data-count="58" data-suffix="M+">58M+</b><span>Hyundai &amp; Kia vehicles supported with service parts</span></div>
+      <div class="stat"><b data-count="2.4" data-suffix="M" data-dec="1">2.4M</b><span>Service parts items stocked</span></div>
+      <div class="stat"><b data-count="6">6</b><span>North American recruiting destinations</span></div>
+      <div class="stat"><b>2045</b><span>Hyundai Mobis carbon-neutral target</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap split reveal">
+      <div><p class="eyebrow">Company overview</p><h2 class="upper" style="font-size:clamp(28px,3.4vw,42px)">Where Movement Begins</h2></div>
+      <div class="muted" style="font-size:17px">
+        <p style="margin-top:0">Hyundai Mobis is a global automotive parts supplier focused on electrification, autonomous driving and connectivity. It builds three core modules (chassis, cockpit and front-end) and supplies service parts for Hyundai, Genesis and Kia vehicles worldwide.</p>
+        <p style="margin-bottom:0">In North America, MOBIS companies manufacture modules and electrified components for Hyundai and Kia assembly plants in Alabama and Georgia, and support engineering, sales and parts operations across the region.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block white">
+    <div class="wrap">
+      <div class="section-head reveal"><div><p class="eyebrow">Our locations</p><h2>Four organizations, one region</h2></div><a class="link-arrow" href="#/locations">All locations <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="grid reveal">
+        <article class="card"><div class="media" style="background-image:url('https://mobissavannah.com/img/84ff544f-98c3-432c-aabb-0f71c20d759a/mobis-assembly-line-picture1.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=881%2C343%2C0%2C0')"><span class="tag">Since 2002</span></div><div class="body"><h3>MOBIS Alabama</h3><div class="where">Montgomery, Alabama</div><p>Cockpit and chassis modules, bumper assemblies, instrument panels and EV battery modules.</p><a class="link-arrow" href="#/locations/alabama">Learn more <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="card"><div class="media" style="background-image:url('https://mobissavannah.com/img/2a606088-eebf-405a-9292-043bd888cfe8/mal-sv-module-name.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=2258%2C1363%2C0%2C0')"><span class="tag">HMGMA supplier</span></div><div class="body"><h3>MOBIS Savannah</h3><div class="where">Ellabell, Georgia</div><p>Largest Tier 1 supplier to HMGMA: chassis, cockpit and front-end modules, delivered in sequence.</p><a class="link-arrow" href="#/locations/savannah">Learn more <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="card"><div class="media"><span class="tag">Since 2009</span></div><div class="body"><h3>MOBIS Georgia</h3><div class="where">West Point, Georgia</div><p>Cockpit modules, chassis modules and bumper assemblies for Kia Georgia.</p><a class="link-arrow" href="#/locations/georgia">Learn more <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="card"><div class="media" style="background-image:url('https://mobissavannah.com/img/decdc5ef-d587-4017-92c8-b69544725ee2/7g-1-of-1.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=1920%2C1079%2C0%2C0')"><span class="tag">Regional</span></div><div class="body"><h3>MOBIS North America</h3><div class="where">Michigan, Ohio &amp; Georgia</div><p>Regional operations, engineering and electrified powertrain production.</p><a class="link-arrow" href="#/locations/northamerica">Learn more <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head reveal"><div><p class="eyebrow">Our operations</p><h2>From modules to mobility tech</h2></div><a class="link-arrow" href="#/operations">All capabilities <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="grid reveal">
+        <div class="feature"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div><h3>Module manufacturing</h3><p>Chassis, cockpit and front-end modules and bumpers, built for vehicle assembly lines.</p></div>
+        <div class="feature"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Electrification</h3><p>EV battery modules, power electric systems and integrated charging control units.</p></div>
+        <div class="feature"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><h3>System solutions</h3><p>Autonomous driving, IVI systems, lamps, braking, steering, safety and suspension.</p></div>
+        <div class="feature"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></div><h3>Service parts</h3><p>Parts supply for more than 58 million Hyundai and Kia vehicles worldwide.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block navy on-dark" style="background:var(--alt)">
+    <div class="wrap split">
+      <div class="reveal"><p class="eyebrow">Our values</p><h2 class="upper" style="font-size:clamp(28px,3.4vw,40px)">Built on the core values of Hyundai Motor Group</h2><p class="lead">Customer, Challenge, Collaboration, People and Globality guide how our teams work every day.</p><div style="margin-top:28px"><a class="btn btn-ghost" href="#/values">Read our values</a></div></div>
+      <div class="acc reveal">
+        <details open><summary>Customer <span class="pm" aria-hidden="true">+</span></summary><p>A customer-driven culture of top quality and service, with every value centered on customers.</p></details>
+        <details><summary>Challenge <span class="pm" aria-hidden="true">+</span></summary><p>Rejecting complacency and taking on greater challenges with passion and creative thinking.</p></details>
+        <details><summary>Collaboration <span class="pm" aria-hidden="true">+</span></summary><p>Building synergy through communication and cooperation inside the company and with partners.</p></details>
+        <details><summary>People <span class="pm" aria-hidden="true">+</span></summary><p>Developing each member's potential through a culture that respects talent.</p></details>
+        <details><summary>Globality <span class="pm" aria-hidden="true">+</span></summary><p>Respecting diverse cultures and striving to be a respected, world-class global citizen.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" style="background-image:url('https://mobissavannah.com/img/84ff544f-98c3-432c-aabb-0f71c20d759a/mobis-assembly-line-picture1.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=881%2C343%2C0%2C0')">
+    <div class="wrap"><div><h2>Build your career with MOBIS.</h2><p style="margin:8px 0 0;opacity:.9">Six recruiting destinations across our North American companies.</p></div><a class="btn btn-white" href="#/careers">Explore Careers</a></div>
+  </section>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div data-page="about" data-title="About MOBIS | MOBIS">
+  <section class="hero sub"><div class="bg" style="background-image:url('https://mobissavannah.com/img/decdc5ef-d587-4017-92c8-b69544725ee2/7g-1-of-1.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=1920%2C1079%2C0%2C0')"></div>
+    <div class="wrap on-dark"><p class="eyebrow">About MOBIS</p><h1>Lead the Shift in Mobility, Move the World beyond Possibilities.</h1><p class="lead">The Hyundai Mobis brand vision, guiding a global parts supplier on its path toward becoming a mobility solutions provider.</p></div></section>
+
+  <section class="block"><div class="wrap split reveal">
+    <div>
+      <p class="eyebrow">Corporate · Hyundai Mobis</p>
+      <h2 class="upper" style="font-size:clamp(26px,3vw,36px);margin-bottom:20px">Hyundai Mobis at a glance</h2>
+      <div class="muted">
+        <p>Hyundai Mobis forms the parts and service arm for Hyundai, Genesis and Kia. It manufactures the three core vehicle modules (chassis, cockpit and front-end), produces safety, steering and multimedia systems, and supplies after-sales service parts. It has expanded into smart mobility, urban air mobility and robotics.</p>
+        <p>The company is evolving into a mobility solutions provider, combining software and hardware and pursuing open innovation through startup investment and partnerships with global technology companies.</p>
+        <p style="margin-bottom:0">Its sustainability vision, "Innovation with Responsibility, Mobility by Clean Technology," includes carbon neutrality by 2045 and renewable energy at all business sites by 2040.</p>
+      </div>
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">
+      <div class="feature"><p class="small muted" style="margin:0 0 4px">Slogan</p><h3 style="margin:0">Where Movement Begins</h3></div>
+      <div class="feature"><p class="small muted" style="margin:0 0 4px">Chief Executive Officer</p><h3 style="margin:0">Gyusuk Lee</h3></div>
+      <div class="feature"><p class="small muted" style="margin:0 0 4px">Service parts</p><h3 style="margin:0">58M+ vehicles</h3></div>
+      <div class="feature"><p class="small muted" style="margin:0 0 4px">Climate</p><h3 style="margin:0">Net zero by 2045</h3></div>
+    </div>
+  </div></section>
+
+  <section class="block white"><div class="wrap">
+    <div class="reveal"><p class="eyebrow">Regional · North America</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px)">MOBIS in North America</h2><p class="lead">MOBIS operates in North America through several companies. Each is a separate legal entity with its own operations and recruiting portal. This site brings their information together without implying they are one company.</p></div>
+    <div class="grid reveal" style="margin-top:36px">
+      <div class="feature"><h3>MOBIS Alabama</h3><p>Module manufacturing in Montgomery since 2002; largest Tier 1 supplier to Hyundai Motor Manufacturing Alabama and Kia Georgia.</p></div>
+      <div class="feature"><h3>MOBIS Savannah</h3><p>A plant of MOBIS Alabama, LLC in Ellabell, Georgia; largest Tier 1 supplier to Hyundai Motor Group Metaplant America.</p></div>
+      <div class="feature"><h3>MOBIS Georgia</h3><p>Plant in West Point since 2009; largest Tier 1 supplier to Kia Georgia.</p></div>
+      <div class="feature"><h3>MOBIS North America</h3><p>Regional operations in Michigan and Ohio, the Technical Center of America in Plymouth, and Electrified Powertrain in Richmond Hill, Georgia.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="reveal"><p class="eyebrow">Supply chain</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px)">How modularization helps automakers</h2><p class="lead">The Hyundai Mobis Module Division supplies modules just in sequence (JIS) and takes part in the early stages of new vehicle development, which reduces part counts and weight, simplifies assembly and improves inventory control.</p></div>
+    <div class="grid reveal" style="margin-top:36px">
+      <div class="feature"><h3>Tier 1 module supplier</h3><p>Complete modules delivered to Hyundai and Kia plants in Alabama and Georgia.</p></div>
+      <div class="feature"><h3>Electrified components</h3><p>EV battery modules and power electric systems for North American plants.</p></div>
+      <div class="feature"><h3>Global R&amp;D</h3><p>Research centers in Korea, North America, Europe, China and India.</p></div>
+      <div class="feature"><h3>Service parts</h3><p>About 2.4 million items stocked for more than 193 vehicle models.</p></div>
+    </div>
+    <p class="small muted" style="margin-top:32px">Sources: <a href="https://www.mobis.com/en/aboutus/aboutus.do" target="_blank" rel="noopener">mobis.com</a>, <a href="https://www.mobissavannah.com/" target="_blank" rel="noopener">mobissavannah.com</a>, Office of the Governor of Georgia (Nov 2022), Made in Alabama (Oct 2022). <span class="ph">Company history timeline: to be added from official sources.</span></p>
+  </div></section>
+</div>
+
+<!-- ================= LOCATIONS ================= -->
+<div data-page="locations" data-title="Our Locations | MOBIS">
+  <section class="hero sub"><div class="bg" style="background-image:url('https://mobissavannah.com/img/2a606088-eebf-405a-9292-043bd888cfe8/mal-sv-module-name.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=2258%2C1363%2C0%2C0')"></div>
+    <div class="wrap on-dark"><p class="eyebrow">Our Locations</p><h1>Four organizations. One North American presence.</h1>
+      <div class="actions"><a class="btn btn-ghost" href="#/locations/alabama">Alabama</a><a class="btn btn-ghost" href="#/locations/savannah">Savannah</a><a class="btn btn-ghost" href="#/locations/georgia">Georgia</a><a class="btn btn-ghost" href="#/locations/northamerica">North America</a></div></div></section>
+
+  <section class="loc" id="alabama"><div class="wrap split">
+    <div class="photo reveal" style="background-image:url('https://mobissavannah.com/img/84ff544f-98c3-432c-aabb-0f71c20d759a/mobis-assembly-line-picture1.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=881%2C343%2C0%2C0')" role="img" aria-label="MOBIS module assembly line"></div>
+    <div class="reveal"><p class="num">01 · Montgomery, Alabama</p><h2>MOBIS Alabama</h2>
+      <p>MOBIS has manufactured on an 83-acre site in Montgomery since 2002. It is the largest Tier 1 supplier to Hyundai Motor Manufacturing Alabama and Kia Georgia, delivering complete modules to both. An EV battery module plant on the HMMA campus was announced in 2022.</p>
+      <div class="chips"><span class="chip">Cockpit modules</span><span class="chip">Front &amp; rear chassis modules</span><span class="chip">Bumper assemblies</span><span class="chip">Instrument panels</span><span class="chip">EV battery modules</span></div>
+      <p class="small"><span class="ph">Redistribution Center, benefits and facility contact: to be added from mobisalabamallc.com.</span></p>
+      <div class="meta"><a class="btn btn-line" href="https://www.mobisalabamallc.com/home" target="_blank" rel="noopener">Official website</a><a class="btn btn-red" href="https://alabamaexternal-mobisalabamallc.icims.com/jobs/intro?hashed=-625916719&amp;mobile=false&amp;width=1694&amp;height=500&amp;bga=true&amp;needsRedirect=false&amp;jan1offset=-300&amp;jun1offset=-240" target="_blank" rel="noopener">Alabama jobs</a></div></div>
+  </div></section>
+
+  <section class="loc" id="savannah"><div class="wrap split">
+    <div class="reveal"><p class="num">02 · Ellabell, Georgia</p><h2>Hyundai MOBIS Savannah</h2>
+      <p>Hyundai MOBIS Savannah (MSV), a plant of MOBIS Alabama, LLC, is the largest Tier 1 supplier to Hyundai Motor Group Metaplant America (HMGMA). It delivers three major modules on time and in sequence, which streamlines assembly at HMGMA and reduces the need for warehouse and storage space.</p>
+      <div class="chips"><span class="chip">Front &amp; rear chassis modules</span><span class="chip">Cockpit modules</span><span class="chip">Front-end modules</span><span class="chip">Just-in-sequence delivery</span></div>
+      <p class="small muted">455 Tucson Drive, Ellabell, GA 31308 · <a href="tel:+19123728380">(912) 372-8380</a></p>
+      <div class="meta"><a class="btn btn-line" href="https://www.mobissavannah.com/" target="_blank" rel="noopener">Official website</a><a class="btn btn-red" href="https://savannahexternal-mobisalabamallc.icims.com/jobs/intro?hashed=-625916719&amp;mobile=false&amp;width=1694&amp;height=500&amp;bga=true&amp;needsRedirect=false&amp;jan1offset=-300&amp;jun1offset=-240" target="_blank" rel="noopener">Savannah jobs</a></div></div>
+    <div class="photo reveal" style="background-image:url('https://mobissavannah.com/img/2a606088-eebf-405a-9292-043bd888cfe8/mal-sv-module-name.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=2258%2C1363%2C0%2C0')" role="img" aria-label="Hyundai MOBIS Savannah facility"></div>
+  </div></section>
+
+  <section class="loc" id="georgia"><div class="wrap split">
+    <div class="photo reveal" style="display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px" role="img" aria-label="MOBIS Georgia facility photo placeholder">MOBIS Georgia facility photo</div>
+    <div class="reveal"><p class="num">03 · West Point, Georgia</p><h2>MOBIS Georgia</h2>
+      <p>MOBIS has operated its West Point plant since 2009, with nearly 1,200 employees as of 2022. It is the largest Tier 1 supplier to the Kia Georgia assembly plant.</p>
+      <div class="chips"><span class="chip">Cockpit modules</span><span class="chip">Chassis modules</span><span class="chip">Bumper assemblies</span></div>
+      <p class="small"><span class="ph">Benefits and facility contact: to be added from mobisgeorgia.com.</span></p>
+      <div class="meta"><a class="btn btn-line" href="https://www.mobisgeorgia.com/" target="_blank" rel="noopener">Official website</a><a class="btn btn-red" href="https://georgiaexternal-mobisalabamallc.icims.com/jobs/intro?hashed=-625916719&amp;mobile=false&amp;width=1694&amp;height=500&amp;bga=true&amp;needsRedirect=false&amp;jan1offset=-300&amp;jun1offset=-240" target="_blank" rel="noopener">Georgia jobs</a></div></div>
+  </div></section>
+
+  <section class="loc" id="northamerica"><div class="wrap">
+    <div class="reveal"><p class="num">04 · Regional operations</p><h2>MOBIS North America</h2><p style="max-width:760px">Regional operations, engineering and electrified powertrain production. Each company recruits through its own portal.</p></div>
+    <div class="grid reveal" style="margin-top:28px">
+      <div class="feature"><h3>MOBIS North America MI &amp; OH</h3><p>Regional corporate, manufacturing and engineering operations in Michigan and Ohio.</p><div class="site">Michigan &amp; Ohio</div></div>
+      <div class="feature"><h3>MOBIS Technical Center of America</h3><p>Part of the Hyundai Mobis global R&amp;D network.</p><div class="site">Plymouth, Michigan</div></div>
+      <div class="feature"><h3>Electrified Powertrain</h3><p>EV power electric systems and integrated charging control units (ICCUs) for HMGMA, HMMA and Kia Georgia.</p><div class="site">Richmond Hill, Georgia</div></div>
+    </div>
+    <div class="chips reveal" style="margin-top:28px"><span class="chip">Electrification</span><span class="chip">Autonomous driving</span><span class="chip">ADAS</span><span class="chip">In-vehicle infotainment</span><span class="chip">Engineering &amp; R&amp;D</span></div>
+    <div class="meta"><a class="btn btn-line" href="https://mobisna.com/home" target="_blank" rel="noopener">Official website</a><a class="btn btn-red" href="#/careers">North America jobs</a></div>
+    <p class="small muted" style="margin-top:32px">Sources: mobissavannah.com, Office of the Governor of Georgia (Nov 2022), Made in Alabama (Oct 2022), mobis.com. Figures reflect the dates of those announcements.</p>
+  </div></section>
+</div>
+
+<!-- ================= OPERATIONS ================= -->
+<div data-page="operations" data-title="Operations | MOBIS">
+  <section class="hero sub"><div class="bg" style="background-image:url('https://mobissavannah.com/img/84ff544f-98c3-432c-aabb-0f71c20d759a/mobis-assembly-line-picture1.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=881%2C343%2C0%2C0')"></div>
+    <div class="wrap on-dark"><p class="eyebrow">Operations</p><h1>From modules to mobility technology.</h1><p class="lead">Module manufacturing, system solutions and service parts. Where a capability is tied to a North American site, the site is named.</p></div></section>
+  <section class="block"><div class="wrap">
+    <div class="section-head reveal"><div><p class="eyebrow">Built in North America</p><h2>Module manufacturing</h2></div></div>
+    <div class="grid g3 reveal">
+      <div class="feature"><h3>Chassis modules</h3><p>Front and rear chassis modules combining suspension, steering and braking components.</p><div class="site">Alabama · Savannah · Georgia</div></div>
+      <div class="feature"><h3>Cockpit modules</h3><p>Complete cockpit assemblies delivered ready for the vehicle line.</p><div class="site">Alabama · Savannah · Georgia</div></div>
+      <div class="feature"><h3>Front-end modules</h3><p>Front-end modules (FEM), one of the three core Hyundai Mobis module families.</p><div class="site">Savannah</div></div>
+      <div class="feature"><h3>Bumper manufacturing</h3><p>Bumper assemblies supplied alongside front-end modules.</p><div class="site">Alabama · Georgia</div></div>
+      <div class="feature"><h3>Instrument panels</h3><p>Instrument panel manufacturing for cockpit assemblies.</p><div class="site">Alabama</div></div>
+      <div class="feature"><h3>Battery systems</h3><p>EV battery modules for HMMA and Kia Georgia, from a plant on the HMMA campus.</p><div class="site">Montgomery, Alabama</div></div>
+    </div>
+  </div></section>
+  <section class="block white"><div class="wrap">
+    <div class="section-head reveal"><div><p class="eyebrow">Hyundai Mobis global capabilities</p><h2>Technology &amp; system solutions</h2></div></div>
+    <div class="grid g3 reveal">
+      <div class="feature"><h3>Electrification</h3><p>EV power electric systems and integrated charging control units, with electrification hubs in North America, Europe and Asia.</p><div class="site">Richmond Hill, Georgia</div></div>
+      <div class="feature"><h3>Automotive electronics</h3><p>IVI systems, lamps, and braking, steering, safety and suspension systems.</p><div class="site">Global</div></div>
+      <div class="feature"><h3>Advanced driver assistance</h3><p>ADAS tested on winter proving grounds in temperatures down to -40 °C.</p><div class="site">Global</div></div>
+      <div class="feature"><h3>Autonomous driving</h3><p>A core focus area within Hyundai Mobis system solutions.</p><div class="site">Global</div></div>
+      <div class="feature"><h3>Research &amp; development</h3><p>R&amp;D centers in Korea, North America, Europe, China and India, shifting toward software-centered development.</p><div class="site">Plymouth, Michigan</div></div>
+      <div class="feature"><h3>Logistics &amp; distribution</h3><p>Service parts for 58M+ vehicles: about 2.4 million items for 193+ models. Just-in-sequence module delivery to assembly plants.</p><div class="site">Global · Savannah (JIS)</div></div>
+    </div>
+    <p class="small muted" style="margin-top:32px">Sources: <a href="https://www.mobis.com/en/tech/tech.do" target="_blank" rel="noopener">mobis.com Mobility Technology</a>, <a href="https://www.mobis.com/en/tech/rnd.do" target="_blank" rel="noopener">mobis.com R&amp;D</a>, mobissavannah.com, state economic development announcements.</p>
+  </div></section>
+</div>
+
+<!-- ================= VALUES ================= -->
+<div data-page="values" data-title="Our Values | MOBIS">
+  <section class="hero sub"><div class="bg" style="background-image:url('https://mobissavannah.com/img/79f7b013-6829-4218-b275-b4a6dd1422d6/values-image-min.png?fm=jpg&amp;q=80&amp;fit=max&amp;crop=1440%2C964%2C0%2C0')"></div>
+    <div class="wrap on-dark"><p class="eyebrow">Our Values</p><h1>What guides how we work.</h1><p class="lead">Corporate and facility values are shown separately, in the terms each organization publishes.</p></div></section>
+  <section class="block navy on-dark"><div class="wrap split">
+    <div class="reveal"><p class="eyebrow">MOBIS Alabama, LLC · incl. Savannah</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px)">Hyundai Motor Group core values</h2><p class="lead">MOBIS Alabama has embraced five Hyundai Motor Group core values.</p></div>
+    <div class="acc reveal">
+      <details open><summary>Customer <span class="pm" aria-hidden="true">+</span></summary><p>A customer-driven culture of top quality and service, with every value centered on customers.</p></details>
+      <details><summary>Challenge <span class="pm" aria-hidden="true">+</span></summary><p>Rejecting complacency and taking on greater challenges with passion and creative thinking.</p></details>
+      <details><summary>Collaboration <span class="pm" aria-hidden="true">+</span></summary><p>Building synergy through communication and cooperation inside the company and with partners.</p></details>
+      <details><summary>People <span class="pm" aria-hidden="true">+</span></summary><p>Developing each member's potential through a culture that respects talent.</p></details>
+      <details><summary>Globality <span class="pm" aria-hidden="true">+</span></summary><p>Respecting diverse cultures and striving to be a respected, world-class global citizen.</p></details>
+    </div>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <div class="reveal"><p class="eyebrow">Corporate · Hyundai Mobis</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px);margin-bottom:28px">Hyundai Mobis core values</h2></div>
+    <div class="vgrid reveal"><div class="value"><span class="n">01</span><h3>People</h3></div><div class="value"><span class="n">02</span><h3>Challenge</h3></div><div class="value"><span class="n">03</span><h3>Collaboration</h3></div><div class="value"><span class="n">04</span><h3>Customers</h3></div><div class="value"><span class="n">05</span><h3>Globality</h3></div><div class="value"><span class="n">06</span><h3>Passion</h3></div></div>
+  </div></section>
+  <section class="block white"><div class="wrap">
+    <div class="reveal"><p class="eyebrow">Facility · MOBIS Georgia</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px);margin-bottom:28px">MOBIS Georgia values</h2></div>
+    <div class="vgrid reveal"><div class="value"><span class="n">01</span><h3>Customer First</h3></div><div class="value"><span class="n">02</span><h3>Daring Execution</h3></div><div class="value"><span class="n">03</span><h3>Communication &amp; Cooperation</h3></div><div class="value"><span class="n">04</span><h3>Respect for People</h3></div><div class="value"><span class="n">05</span><h3>Go Global</h3></div></div>
+    <div class="split reveal" style="margin-top:56px;align-items:start"><div><p class="eyebrow">Culture</p><h3 class="upper" style="font-size:24px">MO:HAPPY ground rules</h3></div><p class="muted" style="margin:0">Hyundai Mobis employees helped create seven ground rules aimed at a positive workplace, linking challenge and cooperation to employee satisfaction.</p></div>
+    <p class="small muted" style="margin-top:32px">Sources: mobissavannah.com, mobis.com, project brief (MOBIS Georgia values). Value descriptions are summaries. <span class="ph">MOBIS North America values: to be added.</span></p>
+  </div></section>
+</div>
+
+<!-- ================= CAREERS ================= -->
+<div data-page="careers" data-title="Careers | MOBIS">
+  <section class="hero sub"><div class="bg" style="background-image:url('https://mobissavannah.com/img/decdc5ef-d587-4017-92c8-b69544725ee2/7g-1-of-1.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=1920%2C1079%2C0%2C0')"></div>
+    <div class="wrap on-dark"><p class="eyebrow">Careers</p><h1>Build Your Career with MOBIS.</h1><p class="lead">Explore career opportunities across our North American operations. Whether you're interested in manufacturing, engineering, logistics, administration, or corporate positions, discover where your future with MOBIS can begin.</p>
+      <div class="actions"><a class="btn btn-red" href="#/careers/destinations">Find your location</a><a class="btn btn-ghost" href="#/careers/benefits">Benefits overview</a></div></div></section>
+
+  <section class="block" id="destinations"><div class="wrap">
+    <div class="section-head reveal"><div><p class="eyebrow">Recruiting destinations</p><h2>Choose where you want to work</h2><p class="lead">Each MOBIS company hires through its own official portal. Links open in a new tab.</p></div></div>
+    <div class="toolbar reveal nojs-hide" role="search">
+      <label class="search-field"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span class="sr" style="position:absolute;left:-999px">Filter destinations</span><input id="jobQuery" type="search" placeholder="Search by company, city or state"></label>
+      <div class="chips" id="jobFilters">
+        <button class="filter" type="button" data-f="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-f="GA" aria-pressed="false">Georgia</button>
+        <button class="filter" type="button" data-f="AL" aria-pressed="false">Alabama</button>
+        <button class="filter" type="button" data-f="MI" aria-pressed="false">Michigan</button>
+        <button class="filter" type="button" data-f="OH" aria-pressed="false">Ohio</button>
+      </div>
+    </div>
+    <div class="grid g3" id="jobGrid">
+      <article class="card job-card" data-st="GA" data-k="savannah ellabell georgia hmgma icims"><div class="body"><div class="head"><span class="n">01</span><span class="badge">iCIMS</span></div><h3>MOBIS Savannah</h3><div class="where">Ellabell, Georgia</div><p>Explore employment opportunities at the Hyundai MOBIS Savannah facility in Ellabell, Georgia.</p><a class="btn btn-red" href="https://savannahexternal-mobisalabamallc.icims.com/jobs/intro?hashed=-625916719&amp;mobile=false&amp;width=1694&amp;height=500&amp;bga=true&amp;needsRedirect=false&amp;jan1offset=-300&amp;jun1offset=-240" target="_blank" rel="noopener noreferrer">Apply for Savannah positions <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span style="position:absolute;left:-999px">(opens in new tab)</span></a></div></article>
+      <article class="card job-card" data-st="AL" data-k="alabama montgomery icims"><div class="body"><div class="head"><span class="n">02</span><span class="badge">iCIMS</span></div><h3>MOBIS Alabama</h3><div class="where">Montgomery, Alabama</div><p>Explore career opportunities at MOBIS Alabama and its manufacturing operations in Montgomery, Alabama.</p><a class="btn btn-red" href="https://alabamaexternal-mobisalabamallc.icims.com/jobs/intro?hashed=-625916719&amp;mobile=false&amp;width=1694&amp;height=500&amp;bga=true&amp;needsRedirect=false&amp;jan1offset=-300&amp;jun1offset=-240" target="_blank" rel="noopener noreferrer">Apply for Alabama positions <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span style="position:absolute;left:-999px">(opens in new tab)</span></a></div></article>
+      <article class="card job-card" data-st="GA" data-k="georgia west point kia icims"><div class="body"><div class="head"><span class="n">03</span><span class="badge">iCIMS</span></div><h3>MOBIS Georgia</h3><div class="where">West Point, Georgia</div><p>Explore employment opportunities at the MOBIS Georgia manufacturing facility in West Point, Georgia.</p><a class="btn btn-red" href="https://georgiaexternal-mobisalabamallc.icims.com/jobs/intro?hashed=-625916719&amp;mobile=false&amp;width=1694&amp;height=500&amp;bga=true&amp;needsRedirect=false&amp;jan1offset=-300&amp;jun1offset=-240" target="_blank" rel="noopener noreferrer">Apply for Georgia positions <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span style="position:absolute;left:-999px">(opens in new tab)</span></a></div></article>
+      <article class="card job-card" data-st="MI OH" data-k="north america michigan ohio mi oh paylocity corporate"><div class="body"><div class="head"><span class="n">04</span><span class="badge">Paylocity</span></div><h3>MOBIS North America MI &amp; MOBIS North America OH</h3><div class="where">Michigan &amp; Ohio</div><p>Explore corporate, manufacturing, engineering, and other career opportunities with MOBIS North America in Michigan and Ohio.</p><a class="btn btn-red" href="https://recruiting.paylocity.com/recruiting/jobs/All/a8551d62-5288-4a88-9f8b-9226e0b73e90/Mobis-North-America-LLC" target="_blank" rel="noopener noreferrer">View open positions <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span style="position:absolute;left:-999px">(opens in new tab)</span></a></div></article>
+      <article class="card job-card" data-st="MI" data-k="technical center america tca plymouth michigan paylocity engineering r&amp;d"><div class="body"><div class="head"><span class="n">05</span><span class="badge">Paylocity</span></div><h3>MOBIS Technical Center of America &amp; MOBIS North America Plymouth</h3><div class="where">Plymouth, Michigan</div><p>Explore career opportunities with MOBIS Technical Center of America and the MOBIS North America Plymouth, Michigan organization.</p><a class="btn btn-red" href="https://recruiting.paylocity.com/recruiting/jobs/All/3c45d436-6834-4b85-b82a-a0abdca9f507/Mobis-North-American-LLC---Plymouth" target="_blank" rel="noopener noreferrer">View open positions <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span style="position:absolute;left:-999px">(opens in new tab)</span></a></div></article>
+      <article class="card job-card" data-st="GA" data-k="electrified powertrain richmond hill bryan county georgia ev isolved"><div class="body"><div class="head"><span class="n">06</span><span class="badge">iSolved</span></div><h3>MOBIS North America Electrified Powertrain</h3><div class="where">Richmond Hill, Georgia</div><p>Explore career opportunities with MOBIS North America Electrified Powertrain through its iSolved recruiting portal.</p><a class="btn btn-red" href="https://mobis.isolvedhire.com/jobs/" target="_blank" rel="noopener noreferrer">View open positions <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span style="position:absolute;left:-999px">(opens in new tab)</span></a></div></article>
+    </div>
+    <p class="empty" id="jobEmpty">No destinations match. <button class="filter" type="button" id="jobReset">Show all</button></p>
+    <p class="small muted" style="margin-top:20px">Applications are submitted on each company's official recruiting portal. MOBIS companies are separate employers; openings, hiring processes and benefits are set by each.</p>
+  </div></section>
+
+  <section class="block white" id="areas"><div class="wrap split">
+    <div class="reveal"><p class="eyebrow">Why MOBIS</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px);margin-bottom:24px">Why work at MOBIS?</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px">
+        <div><b>Professional development</b><p class="muted" style="margin:4px 0 0;font-size:15px">Grow your skills in a global automotive organization.</p></div>
+        <div><b>Manufacturing &amp; engineering</b><p class="muted" style="margin:4px 0 0;font-size:15px">Work on modules and technology in vehicles on the road.</p></div>
+        <div><b>Career advancement</b><p class="muted" style="margin:4px 0 0;font-size:15px">Build a long-term path across functions and teams.</p></div>
+        <div><b>Team-oriented culture</b><p class="muted" style="margin:4px 0 0;font-size:15px">Collaborate across production, support and corporate roles.</p></div>
+      </div></div>
+    <div class="reveal"><p class="eyebrow">Career areas</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px);margin-bottom:12px">Where you could fit</h2><p class="muted small" style="margin:0 0 20px">Categories of work across MOBIS. Current openings vary by location.</p>
+      <div class="chips"><span class="chip">Manufacturing &amp; Production</span><span class="chip">Engineering</span><span class="chip">Maintenance</span><span class="chip">Quality Assurance</span><span class="chip">Logistics &amp; Supply Chain</span><span class="chip">Human Resources</span><span class="chip">Finance &amp; Accounting</span><span class="chip">Purchasing &amp; Procurement</span><span class="chip">Information Technology</span><span class="chip">Administration &amp; Management</span></div></div>
+  </div></section>
+
+  <section class="block navy on-dark" id="benefits"><div class="wrap">
+    <div class="reveal"><p class="eyebrow">Perks &amp; benefits</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px)">Employee benefits</h2><p class="lead">Benefits commonly published by MOBIS employers include the programs below. <strong style="color:var(--ink)">Benefits vary by employer and location</strong>; not every benefit is offered at every facility. For example, MOBIS Savannah lists 15 paid holidays and a 401(k) with company match.</p></div>
+    <div class="benefits reveal" style="margin-top:36px">
+      <div class="benefit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Medical insurance</div>
+      <div class="benefit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Dental insurance</div>
+      <div class="benefit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Vision insurance</div>
+      <div class="benefit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>401(k)</div>
+      <div class="benefit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Paid vacation &amp; personal time off</div>
+      <div class="benefit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Paid holidays</div>
+      <div class="benefit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Life insurance</div>
+      <div class="benefit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Disability insurance</div>
+      <div class="benefit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Tuition assistance (where offered)</div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ================= ETHICS ================= -->
+<div data-page="ethics" data-title="Ethics &amp; Compliance | MOBIS">
+  <section class="hero sub"><div class="bg" style="background-image:url('https://mobissavannah.com/img/1d5bb23f-b318-437a-80c9-969544543eac/mobis-code-of-conduct-1.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=800%2C499%2C0%2C0')"></div>
+    <div class="wrap on-dark"><p class="eyebrow">Ethics &amp; Compliance</p><h1>Doing business the right way.</h1><p class="lead">Official policies, reporting channels and safety principles. Policy documents are linked in their original form.</p></div></section>
+  <section class="block"><div class="wrap split" style="align-items:start">
+    <div class="reveal"><p class="eyebrow">Code of Conduct</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px);margin-bottom:16px">Our standard for decisions</h2>
+      <p class="muted">The Hyundai Mobis Code of Conduct guides directors, officers and employees to work fairly and responsibly. It brings together the ethics charter, ethical practices and global compliance guidelines, covering conflicts of interest, insider trading, company assets, contracts, and anti-corruption rules on bribery, gifts and hospitality, and political neutrality.</p>
+      <p class="muted" style="margin-bottom:0">A separate Code of Conduct for Business Partners sets expectations for suppliers and partners.</p></div>
+    <div class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px 24px;box-shadow:var(--shadow)">
+      <a class="doc" href="https://www.mobis.com/resources/pdf/Hyundai_Mobis_Code_of_Conduct_rev_2024.pdf" target="_blank" rel="noopener">Code of Conduct (2024 revision)<span class="type">PDF</span></a>
+      <a class="doc" href="https://mobissavannah.com/storage/uploads/1910ad48-a76d-4dcf-8502-918c2e60fd14/2026-Hyundai-Mobis-Code-of-Counduct-for-Business-Partners.pdf" target="_blank" rel="noopener">Code of Conduct for Business Partners (2026)<span class="type">PDF</span></a>
+      <a class="doc" href="https://mobissavannah.com/storage/uploads/e40b00cd-463d-44b5-9c38-f3e856f69ffd/UPDATED-2026-Human-Rights-Policy-of-Hyundai-Mobis.pdf" target="_blank" rel="noopener">Human Rights Policy (2026 update)<span class="type">PDF</span></a>
+      <a class="doc" href="https://www.mobis.com/resources/pdf/Hyundai_Mobis_Compliance_Control_Standard_Eng.pdf" target="_blank" rel="noopener">Compliance Control Standard<span class="type">PDF</span></a>
+      <a class="doc" style="border-bottom:0" href="https://www.mobis.com/resources/pdf/Hyundai_Mobis_Human_Rights_Management_Goal_Eng.pdf" target="_blank" rel="noopener">Human Rights Management Goals<span class="type">PDF</span></a>
+    </div>
+  </div></section>
+  <section class="block white"><div class="wrap">
+    <div class="reveal"><p class="eyebrow">Speak up</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px)">Report a concern</h2><p class="lead">Reporter identity is kept confidential and retaliation is prohibited. Anonymous reporting is available.</p></div>
+    <div class="grid reveal" style="margin-top:32px">
+      <a class="report" href="https://www.redflagreporting.com/" target="_blank" rel="noopener"><b>Red Flag Reporting ↗</b><span>Third-party reporting service used by MOBIS Savannah.</span></a>
+      <a class="report" href="https://www.kbei.org/whistle/center/?code=mobis" target="_blank" rel="noopener"><b>Global Hotline ↗</b><span>Anonymous reporting of ethics or compliance violations.</span></a>
+      <a class="report" href="https://www.mobis.com/en/util/util_cyber.do" target="_blank" rel="noopener"><b>Cyber Auditor ↗</b><span>Hyundai Mobis online reporting page.</span></a>
+      <a class="report" href="https://mpos.mobis.co.kr/login.jsp" target="_blank" rel="noopener"><b>Partner Grievance Center ↗</b><span>For suppliers and business partners.</span></a>
+    </div>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <div class="reveal"><p class="eyebrow">Safety &amp; health</p><h2 class="upper" style="font-size:clamp(26px,3vw,36px);margin-bottom:28px">Safety principles</h2></div>
+    <div class="grid reveal" style="grid-template-columns:repeat(auto-fill,minmax(210px,1fr))">
+      <div class="feature"><h3>Beyond legal requirements</h3><p>Proactive measures that exceed legal and social standards.</p></div>
+      <div class="feature"><h3>Clean, healthy workplace</h3><p>Limiting emissions and managing employee healthcare.</p></div>
+      <div class="feature"><h3>Safety culture</h3><p>Everyone helps identify and reduce hazards.</p></div>
+      <div class="feature"><h3>Partner safety</h3><p>Joint improvement plans, ISO 45001 support and training.</p></div>
+      <div class="feature"><h3>Emergency readiness</h3><p>Manuals and drills for fires, hazardous materials and disasters.</p></div>
+    </div>
+    <p class="small muted" style="margin-top:32px">Sources: <a href="https://www.mobis.com/en/sustain/comp.do" target="_blank" rel="noopener">mobis.com Compliance</a>, <a href="https://www.mobis.com/en/sustain/safe_info.do" target="_blank" rel="noopener">mobis.com Safety &amp; Health</a>, mobissavannah.com. Summaries are for navigation only; the linked documents govern.</p>
+  </div></section>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div data-page="contact" data-title="Contact Us | MOBIS">
+  <section class="hero sub"><div class="bg" style="background-image:url('https://mobissavannah.com/img/decdc5ef-d587-4017-92c8-b69544725ee2/7g-1-of-1.jpg?fm=jpg&amp;q=80&amp;fit=max&amp;crop=1920%2C1079%2C0%2C0')"></div>
+    <div class="wrap on-dark"><p class="eyebrow">Contact Us</p><h1>Reach the right MOBIS team.</h1><p class="lead">Each company handles its own inquiries. Job seekers: please apply through the <a href="#/careers" style="font-weight:600">Careers page</a>.</p></div></section>
+  <section class="block"><div class="wrap">
+    <div class="split reveal" style="align-items:stretch;margin-bottom:48px">
+      <div class="card" style="padding:32px"><p class="eyebrow">Featured · Ellabell, Georgia</p><h2 class="upper" style="font-size:28px;margin-bottom:20px">Hyundai MOBIS Savannah</h2>
+        <dl class="contact"><dt>Address</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=455+Tucson+Drive+Ellabell+GA+31308" target="_blank" rel="noopener">455 Tucson Drive<br>Ellabell, GA 31308</a></dd><dt>Phone</dt><dd><a href="tel:+19123728380">(912) 372-8380</a></dd><dt>Email</dt><dd><a href="mailto:svcareers@mobis.com">svcareers@mobis.com</a></dd><dt>Web</dt><dd><a href="https://www.mobissavannah.com/" target="_blank" rel="noopener">mobissavannah.com</a></dd></dl></div>
+      <iframe class="map" title="Map of Hyundai MOBIS Savannah, 455 Tucson Drive, Ellabell, GA" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=455+Tucson+Drive+Ellabell+GA+31308&amp;output=embed"></iframe>
+    </div>
+    <div class="grid reveal">
+      <div class="feature"><h3>MOBIS Alabama</h3><dl class="contact" style="margin-top:12px"><dt>Address</dt><dd class="ph">Montgomery, AL · to be added</dd><dt>Phone</dt><dd class="ph">to be added</dd></dl><a class="link-arrow" href="https://www.mobisalabamallc.com/home" target="_blank" rel="noopener">mobisalabamallc.com ↗</a></div>
+      <div class="feature"><h3>MOBIS Georgia</h3><dl class="contact" style="margin-top:12px"><dt>Address</dt><dd class="ph">West Point, GA · to be added</dd><dt>Phone</dt><dd class="ph">to be added</dd></dl><a class="link-arrow" href="https://www.mobisgeorgia.com/" target="_blank" rel="noopener">mobisgeorgia.com ↗</a></div>
+      <div class="feature"><h3>MOBIS North America</h3><dl class="contact" style="margin-top:12px"><dt>Address</dt><dd class="ph">to be added</dd><dt>Phone</dt><dd class="ph">to be added</dd></dl><a class="link-arrow" href="https://mobisna.com/home" target="_blank" rel="noopener">mobisna.com ↗</a></div>
+      <div class="feature"><h3>Electrified Powertrain</h3><dl class="contact" style="margin-top:12px"><dt>Address</dt><dd>Belfast Commerce Park, Richmond Hill, GA</dd><dt>Phone</dt><dd class="ph">to be added</dd></dl></div>
+    </div>
+    <div class="card reveal" style="margin-top:40px;padding:24px 28px;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px"><p style="margin:0"><b>Ethics or compliance concern?</b> Use the confidential reporting channels.</p><a class="btn btn-red" href="#/ethics">Report a concern</a></div>
+  </div></section>
+</div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap cols">
+    <div><img src="https://mobissavannah.com/img/b0838fff-9802-42e4-ac52-a19fbf2f0bcb/logo-1.png?fm=png&amp;q=80&amp;fit=max&amp;crop=488%2C170%2C0%2C0" alt="Hyundai MOBIS" width="115" height="40" class="logo-plate" style="margin-bottom:16px"><p style="margin:0;line-height:1.7">One information hub for MOBIS operations and careers across North America.</p></div>
+    <div><h4>Explore</h4><a href="#/about">About MOBIS</a><a href="#/locations">Our Locations</a><a href="#/operations">Operations</a><a href="#/values">Our Values</a><a href="#/ethics">Ethics &amp; Compliance</a><a href="#/contact">Contact Us</a></div>
+    <div><h4>Careers</h4><a href="#/careers">All destinations</a><a href="#/careers/benefits">Benefits</a><a href="#/careers/areas">Career areas</a></div>
+    <div><h4>Official websites</h4><a href="https://www.mobis.com/en/index.do" target="_blank" rel="noopener">Hyundai Mobis</a><a href="https://mobisna.com/home" target="_blank" rel="noopener">MOBIS North America</a><a href="https://www.mobisalabamallc.com/home" target="_blank" rel="noopener">MOBIS Alabama</a><a href="https://www.mobissavannah.com/" target="_blank" rel="noopener">MOBIS Savannah</a><a href="https://www.mobisgeorgia.com/" target="_blank" rel="noopener">MOBIS Georgia</a></div>
+  </div>
+  <div class="wrap legal"><span>© <span id="yr">2026</span> MOBIS. All rights reserved.</span><a href="https://www.redflagreporting.com/" target="_blank" rel="noopener" style="display:inline;padding:0">Red Flag Reporting</a></div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="search-ov" id="searchOv" role="dialog" aria-modal="true" aria-label="Search the site">
+  <div class="search-box">
+    <label class="search-field"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span style="position:absolute;left:-999px">Search</span><input id="siteQuery" type="search" placeholder="Search pages, locations, policies…" autocomplete="off"><kbd>Esc</kbd></label>
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const pages=[...document.querySelectorAll('[data-page]')];
+  const header=document.getElementById('header');
+  const navItems=[...document.querySelectorAll('[data-nav]')];
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* ---------- Router: #/page or #/page/anchor ---------- */
+  function route(){
+    const h=location.hash.replace(/^#\/?/,'');
+    if(h==='main') return;
+    let [page,anchor]=h.split('/');
+    if(!pages.some(p=>p.dataset.page===page)) page='home';
+    pages.forEach(p=>p.classList.toggle('current',p.dataset.page===page));
+    navItems.forEach(n=>n.classList.toggle('active',n.dataset.nav===page));
+    const cur=pages.find(p=>p.dataset.page===page);
+    document.title=cur.dataset.title.replace('&amp;','&');
+    closeDrawer(); closeDropdowns();
+    requestAnimationFrame(()=>{
+      const t=anchor&&document.getElementById(anchor);
+      if(t) t.scrollIntoView({behavior:'smooth'}); else window.scrollTo({top:0});
+      observe(cur);
+    });
+  }
+  window.addEventListener('hashchange',route);
+
+  /* ---------- Sticky header + back to top ---------- */
+  const toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY;
+    header.classList.toggle('scrolled',y>20);
+    toTop.classList.toggle('show',y>700);
+  },{passive:true});
+  toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  /* ---------- Dropdowns (click + keyboard; hover via CSS) ---------- */
+  const dds=[...document.querySelectorAll('.has-dd')];
+  function closeDropdowns(except){dds.forEach(d=>{if(d!==except){d.classList.remove('open');d.querySelector('button').setAttribute('aria-expanded','false');}})}
+  dds.forEach(d=>{
+    const b=d.querySelector('button');
+    b.addEventListener('click',e=>{e.stopPropagation();const o=!d.classList.contains('open');closeDropdowns(d);d.classList.toggle('open',o);b.setAttribute('aria-expanded',o);});
+  });
+  document.addEventListener('click',()=>closeDropdowns());
+
+  /* ---------- Mobile drawer ---------- */
+  const drawer=document.getElementById('drawer'),openD=document.getElementById('openDrawer');
+  function closeDrawer(){drawer.classList.remove('open');drawer.setAttribute('aria-hidden','true');openD.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  openD.addEventListener('click',()=>{drawer.classList.add('open');drawer.setAttribute('aria-hidden','false');openD.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';drawer.querySelector('a').focus();});
+  drawer.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click',closeDrawer));
+
+  /* ---------- Scroll reveal + counters ---------- */
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const io='IntersectionObserver' in window && !reduce ? new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12}) : null;
+  function observe(scope){
+    scope.querySelectorAll('.reveal:not(.in)').forEach(el=>io?io.observe(el):el.classList.add('in'));
+    if(reduce) return;
+    scope.querySelectorAll('[data-count]:not(.done)').forEach(el=>{
+      el.classList.add('done');
+      const end=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),suf=el.dataset.suffix||'',t0=performance.now();
+      (function tick(t){const k=Math.min(1,(t-t0)/1400),v=end*(1-Math.pow(1-k,3));el.textContent=v.toFixed(dec)+suf;if(k<1)requestAnimationFrame(tick);})(t0);
+    });
+  }
+
+  /* ---------- Careers filter ---------- */
+  const q=document.getElementById('jobQuery'),cards=[...document.querySelectorAll('.job-card')],fbtns=[...document.querySelectorAll('#jobFilters .filter')],empty=document.getElementById('jobEmpty');
+  let st='all';
+  function filterJobs(){
+    const s=q.value.trim().toLowerCase();let n=0;
+    cards.forEach(c=>{const ok=(st==='all'||c.dataset.st.split(' ').includes(st))&&(!s||(c.dataset.k+' '+c.textContent).toLowerCase().includes(s));c.style.display=ok?'':'none';if(ok)n++;});
+    empty.style.display=n?'none':'block';
+  }
+  q.addEventListener('input',filterJobs);
+  fbtns.forEach(b=>b.addEventListener('click',()=>{st=b.dataset.f;fbtns.forEach(x=>x.setAttribute('aria-pressed',x===b));filterJobs();}));
+  document.getElementById('jobReset').addEventListener('click',()=>{q.value='';st='all';fbtns.forEach(x=>x.setAttribute('aria-pressed',x.dataset.f==='all'));filterJobs();});
+
+  /* ---------- Site search (Ctrl/Cmd+K) ---------- */
+  const ov=document.getElementById('searchOv'),sq=document.getElementById('siteQuery'),res=document.getElementById('results');
+  const index=[];
+  pages.forEach(p=>{
+    const pageName=p.dataset.title.split('|')[0].replace('&amp;','&').trim();
+    p.querySelectorAll('h1,h2,h3').forEach(h=>{
+      const sec=h.closest('[id]');
+      const blk=h.closest('section,article,.feature,.card,details')||h;
+      index.push({title:h.textContent.trim(),page:p.dataset.page,pageName,anchor:sec&&p.contains(sec)?sec.id:'',text:blk.textContent.replace(/\s+/g,' ').toLowerCase()});
+    });
+  });
+  let sel=0,hits=[];
+  function render(){
+    const s=sq.value.trim().toLowerCase();
+    hits=s?index.filter(i=>i.text.includes(s)||i.title.toLowerCase().includes(s)).slice(0,10):index.filter(i=>i.page!=='home').filter((v,i,a)=>a.findIndex(x=>x.page===v.page)===i);
+    sel=0;
+    res.innerHTML='';
+    if(!hits.length){res.innerHTML='<p style="padding:14px;color:var(--muted);margin:0">No results.</p>';return;}
+    hits.forEach((h,i)=>{const a=document.createElement('a');a.href='#/'+h.page+(h.anchor?'/'+h.anchor:'');a.setAttribute('role','option');if(i===0)a.classList.add('sel');a.innerHTML='';const t=document.createElement('span');t.textContent=h.title;const sm=document.createElement('small');sm.textContent=h.pageName;a.append(t,sm);a.addEventListener('click',closeSearch);res.append(a);});
+  }
+  function openSearch(){ov.classList.add('open');sq.value='';render();setTimeout(()=>sq.focus(),20);}
+  function closeSearch(){ov.classList.remove('open');}
+  document.getElementById('openSearch').addEventListener('click',openSearch);
+  ov.addEventListener('click',e=>{if(e.target===ov)closeSearch();});
+  sq.addEventListener('input',render);
+  sq.addEventListener('keydown',e=>{
+    const links=[...res.querySelectorAll('a')];
+    if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!links.length)return;sel=(sel+(e.key==='ArrowDown'?1:-1)+links.length)%links.length;links.forEach((l,i)=>l.classList.toggle('sel',i===sel));links[sel].scrollIntoView({block:'nearest'});}
+    if(e.key==='Enter'&&links[sel]){location.hash=links[sel].getAttribute('href');closeSearch();}
+  });
+  document.addEventListener('keydown',e=>{
+    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();ov.classList.contains('open')?closeSearch():openSearch();}
+    if(e.key==='Escape'){closeSearch();closeDrawer();closeDropdowns();}
+  });
+
+  route();
+})();
+</script>
+</body>
+</html>
